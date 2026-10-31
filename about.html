@@ -1,57 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>About us - Ereteti Dairy Sacco</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About - Katara Flow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
-<h1> About Ereteti </h1>
-<p>Milk collected twice a day, on three routes out of Ngong.</p>
-</header>
-<nav>
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="routes.html">Our routes</a></li>
-<li><a href="contact.html">Contact</a></li>
-<li><a href="register.html">Join</a></li>
-<li><a href="deliveries.html">Deliveries</a></li>
-</ul>
-</nav>
-<main>
 
-<section>
-<h2><strong> Milk collected twice a day, paid once a month </strong></h2>
-<p> Ereteti Dairy Sacco has collected milk on the Ngong road since 1998.
-    Around eight hundred farmers deliver to us twice a day, and we pay
-    for every accepted litre once a month.</p>
-<p> Any farmer on one of our three routes may join. You need a national
-    ID and a bank account, and you may deliver from the day your membership
-    number is issued. </p>
-</section>
+  
+    <header class="navbar">
+  <a href="index.html" class="brand">
+    <img
+      src="img\katara flow logo.jpeg"
+      alt="Katara Flow"
+      class="logo"
+    />
+    <span class="brand-name">Katara Flow</span>
+  </a>   
 
-<section>
-<h2><strong>Where we collect</strong></h2>
-<ul>
-<li><a href="routes.html">Kiserian route</a></li>
-<li><a href="routes.html">Ngong route</a></li>
-<li><a href="routes.html">Rongai route</a></li>
-</ul>
-</section>
+     <h1>About Katara Flow</h1>
+    <p>Why Nairobi needs a drainage report that can be followed to the end.</p>
+  </header>
 
-<img src="img/collection-centre.jpg"
-alt="Farmers queuing with churns at the Kiserian centre">
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" aria-current="page">About</a></li>
+      <li><a href="how-it-works.html">How it works</a></li>
+      <li><a href="systems.html">Existing systems</a></li>
+      <li><a href="report.html">Report a drain</a></li>
+      <li><a href="track.html">Track a report</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-<blockquote>
-    <em> We started with nine farmers and one cooler. The ledger was a school exercise book.
-    </em>
-</blockquote>
+  <main>
+    <section>
+      <h2>The problem</h2>
+      <p>Much of Nairobi's drainage was built decades ago and has not kept
+         pace with the growth of the city. Many drains are too small, poorly
+         maintained or blocked by solid waste, especially in informal and
+         low-income areas. When it rains hard, the result is flooding that
+         keeps coming back.</p>
+      <p>Residents can already tell the authorities about a faulty drain,
+         but they seldom see what happens next. Without that feedback, they
+         stop trusting the process and stop reporting, and NCWSC loses the
+         location information it needs to find the worst trouble spots.</p>
+      <blockquote>
+        <p>The gap is not that no reporting channel exists. It is that
+           residents cannot see that their report led anywhere.</p>
+      </blockquote>
+    </section>
 
-</main>
-<footer>
-<p>Ereteti Dairy Sacco, PO Box 4021, Ngong.</p>
-<p>Site built by Wanjiru Kamau, DBT Year 1, 2026.</p>
-</footer>
+    <section>
+      <h2>Our aim</h2>
+      <p>To design and build a drainage reporting and tracking system in
+         which residents report blocked or badly kept drains, and then track
+         each report as NCWSC updates it with feedback.</p>
+      <h3>Specific objectives</h3>
+      <ol class="steps">
+        <li>Assess the current state of drainage infrastructure management
+            in urban areas and the challenges involved.</li>
+        <li>Examine existing systems used to manage drainage and similar
+            public reports.</li>
+        <li>Design a system that lets residents report a drainage problem
+            and follow its progress.</li>
+        <li>Develop it as a working piece of software.</li>
+        <li>Test it against what residents need.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Scope and limits</h2>
+      <ul class="cards">
+        <li>
+          <h3>In scope</h3>
+          <p>Report submission with a location tag, the three status stages,
+             and notifications that tell the resident when the status
+             changes. Nairobi only, and drainage problems only.</p>
+        </li>
+        <li>
+          <h3>Out of scope</h3>
+          <p>The physical repair of drains, which stays with NCWSC, and
+             other complaints such as electricity, waste collection or
+             roads.</p>
+        </li>
+        <li>
+          <h3>Known limits</h3>
+          <p>Not everyone has a smartphone or a steady connection, so the
+             interface is kept light and does not assume a smartphone.
+             Resolution is confirmed by NCWSC inside the system rather than
+             by separate field checks.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Goals we support</h2>
+      <p>Katara Flow contributes to Sustainable Development Goals 6 (clean
+         water and sanitation), 11 (sustainable cities and communities) and
+         13 (climate action), by making urban infrastructure safer and more
+         accountable.</p>
+    </section>
+  </main>
+
+  <aside>
+    <h2>At a glance</h2>
+    <ul>
+      <li>Every report moves through three stages:
+          <strong>Reported</strong>, <strong>In progress</strong>
+          and <strong>Resolved</strong>.</li>
+      <li>Katara Flow covers <strong>drainage problems in Nairobi</strong>
+          only. It does not cover roads, waste collection or electricity.</li>
+      <li>Built to be light, so it works on a slow connection.
+          <a href="report.html">Report a drain</a>.</li>
+    </ul>
+  </aside>
+
+  <footer>
+    <p>Katara Flow, Strathmore Institute, Strathmore University, Nairobi, Kenya.</p>
+    <p>Diploma in Business Information Technology project, DBT Year 1, 2026.</p>
+  </footer>
+
 </body>
 </html>

@@ -1,43 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title> Contact us - Ereteti Dairy Sacco </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact - Katara Flow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
-<h1>Ereteti Dairy Sacco</h1>
-<p>Milk collected twice a day, on three routes out of Ngong.</p>
-</header>
-<nav>
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="routes.html">Our routes</a></li>
-<li><a href="contact.html">Contact</a></li>
-<li><a href="register.html">Join</a></li>
-<li><a href="deliveries.html">Deliveries</a></li>
-</ul>
-</nav>
-<main>
-<address>
-Ereteti Dairy Sacco<br>
-PO Box 4021<br>
-Ngong, Kajiado County<br>
-Office address: 0720 000 000
-</address>
-<ul>
-<li><a href="tel:+254720000000">0720000000</a> — the office</li>
-<li><a href="tel:+254733000000">0733000000</a> — the Kiserian centre</li>
-</ul>
 
-<h2>Email</h2>  
-  <p>We will answer within two working days</p>
-  <P><a href="mailto:secretary@eretetisacco.co.ke"> secretary@eretetisacco.co.ke</a></p>
-</main>
-<footer>
-<p>Ereteti Dairy Sacco, PO Box 4021, Ngong.</p>
-<p>Site built by Wanjiru Kamau, DBT Year 1, 2026.</p>
-</footer>
+<header class="navbar">
+  <a href="index.html" class="brand">
+    <img
+      src="img\katara flow logo.jpeg"
+      alt="Katara Flow"
+      class="logo"
+    />
+    <span class="brand-name">Katara Flow</span>
+  </a>  
+  
+    <h1>Contact us</h1>
+    <p>Questions, ideas or problems with the site? We would like to hear from you.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="how-it-works.html">How it works</a></li>
+      <li><a href="systems.html">Existing systems</a></li>
+      <li><a href="report.html">Report a drain</a></li>
+      <li><a href="track.html">Track a report</a></li>
+      <li><a href="contact.html" aria-current="page">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Send us a message</h2>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Your message</legend>
+
+          <label for="c-name">Your name (required)</label>
+          <input type="text" id="c-name" name="name" required>
+
+          <label for="c-email">Email address (required)</label>
+          <input type="email" id="c-email" name="email" required>
+
+          <label for="c-topic">About</label>
+          <select id="c-topic" name="topic">
+            <option value="question">A question about Katara Flow</option>
+            <option value="idea">An idea to improve it</option>
+            <option value="problem">A problem using the site</option>
+          </select>
+
+          <label for="c-message">Message (required)</label>
+          <textarea id="c-message" name="message" required></textarea>
+        </fieldset>
+
+        <button type="submit">Send message</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Where we are</h2>
+      <address>
+        Katara Flow project team<br>
+        Strathmore Institute, Strathmore University<br>
+        Nairobi, Kenya
+      </address>
+      <p class="note">Katara Flow is a student project. To report a drainage
+         problem, use the <a href="report.html">report form</a>.</p>
+    </section>
+  </main>
+
+  <aside>
+    <h2>At a glance</h2>
+    <ul>
+      <li>Every report moves through three stages:
+          <strong>Reported</strong>, <strong>In progress</strong>
+          and <strong>Resolved</strong>.</li>
+      <li>Katara Flow covers <strong>drainage problems in Nairobi</strong>
+          only. It does not cover roads, waste collection or electricity.</li>
+      <li>Built to be light, so it works on a slow connection.
+          <a href="report.html">Report a drain</a>.</li>
+    </ul>
+  </aside>
+
+  <footer>
+    <p>Katara Flow, Strathmore Institute, Strathmore University, Nairobi, Kenya.</p>
+    <p>Diploma in Business Information Technology project, DBT Year 1, 2026.</p>
+  </footer>
+
 </body>
 </html>

@@ -1,0 +1,448 @@
+/* House style — main #0B5C7A  ground #F2F7F9  ink #14232B  accent #E8833A
+   headings: Merriweather, serif   body: Public Sans, sans-serif */
+
+/* 1 · house style  (owner: Member 1) */
+:root {
+  --main: #073B5C;
+  --ground: #FFFDF5;
+  --ink: #087EAA;
+  --text: black;
+  --accent: #D9A62E;
+  --line: color-mix(in srgb, var(--text) 25%, var(--ground));
+}
+
+.logo {
+    width: 300px;
+    height: 100px;
+    object-fit: contain;
+    flex-shrink:0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--text);
+  font-family: "Public Sans", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+h1, h2, h3 {
+  font-family: "Merriweather", serif;
+  line-height: 1.25;
+}
+
+h2 {
+  color: var(--main);
+  margin-top: 0;
+}
+
+h3 {
+  color: #087EAA;
+  margin-bottom: 0.25rem;
+}
+
+a {
+  color: var(--main);
+  font-weight: 600;
+}
+
+a:hover,
+a:focus {
+  text-decoration-thickness: 3px;
+}
+
+img,
+input,
+select,
+textarea {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+  display: block;
+}
+
+header,
+footer {
+  background: var(--main);
+  color: var(--ground);
+}
+
+header {
+  padding: 1.75rem 1.25rem;
+}
+
+header h1 {
+  margin: 0 0 0.35rem;
+}
+
+header p {
+  margin: 0;
+  max-width: 46rem;
+}
+
+footer {
+  padding: 1rem 1.25rem;
+  font-size: 0.95rem;
+}
+
+footer p {
+  margin: 0.25rem 0;
+}
+
+/* 2 · layout  (owner: Member 1) */
+body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 18rem;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    "header header"
+    "nav    nav"
+    "main   aside"
+    "footer footer";
+  min-height: 100vh;
+}
+
+header { grid-area: header; }
+nav    { grid-area: nav; }
+main   { grid-area: main; padding: 1.5rem 1.25rem; }
+aside  { grid-area: aside; }
+footer { grid-area: footer; }
+
+nav {
+  background: var(--ink);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0.75rem 1.25rem;
+}
+
+nav a {
+  color: var(--ground);
+  text-decoration: none;
+  padding: 0.25rem 0;
+  border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a:focus,
+nav a[aria-current="page"] {
+  border-bottom-color: #073B5C;
+}
+
+section + section {
+  margin-top: 2rem;
+}
+
+aside {
+  align-self: start;
+  margin: 1.5rem 1.25rem 1.5rem 0;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--line);
+  border-top: 5px solid var(--accent);
+}
+
+aside h2 {
+  font-size: 1.15rem;
+}
+
+aside ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+aside li + li {
+  margin-top: 0.75rem;
+}
+
+/* cards in a row that wraps */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+}
+
+.cards li {
+  flex: 1 1 13rem;
+  min-width: 0;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--line);
+  border-top: 5px solid var(--accent);
+}
+
+.cards h3 {
+  margin-top: 0;
+  color: var(--main);
+}
+
+.cards p {
+  margin: 0.25rem 0 0;
+}
+
+/* 3 · index.html, about.html, how-it-works.html  (owner: Member 1) */
+.lead {
+  font-size: 1.2rem;
+  max-width: 44rem;
+}
+
+blockquote {
+  margin: 1.5rem 0;
+  padding: 0.5rem 1.25rem;
+  border-left: 5px solid var(--accent);
+  font-family: "Merriweather", serif;
+  font-size: 1.15rem;
+}
+
+blockquote p {
+  margin: 0;
+}
+
+.steps {
+  padding-left: 1.25rem;
+}
+
+.steps li + li {
+  margin-top: 0.75rem;
+}
+
+/* 4 · systems.html and track.html: tables and badges  (owner: Member 2) */
+.table-scroll {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+caption {
+  text-align: left;
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  padding: 0.5rem 0;
+}
+
+th,
+td {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+thead th {
+  background: var(--main);
+  color: var(--ground);
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.1rem 0.6rem;
+  border: 2px solid var(--ink);
+  border-radius: 1rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.badge-progress {
+  border-color: var(--accent);
+}
+
+.badge-resolved {
+  background: var(--main);
+  border-color: var(--main);
+  color: var(--ground);
+}
+
+.note {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border-left: 5px solid var(--accent);
+  border-top: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+/* 5 · report.html and contact.html: forms  (owner: Member 2) */
+form {
+  max-width: 36rem;
+}
+
+fieldset {
+  margin: 0 0 1.25rem;
+  padding: 1rem 1.25rem 1.25rem;
+  border: 1px solid var(--line);
+  border-top: 5px solid var(--accent);
+}
+
+legend {
+  padding: 0 0.5rem;
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  color: var(--main);
+}
+
+label {
+  display: block;
+  margin-top: 0.75rem;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="search"],
+select,
+textarea {
+  display: block;
+  width: 100%;
+  margin-top: 0.25rem;
+  padding: 0.6rem;
+  font: inherit;
+  color: var(--ink);
+  background: var(--ground);
+  border: 2px solid var(--ink);
+  border-radius: 4px;
+}
+
+textarea {
+  min-height: 7rem;
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.hint {
+  display: block;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.checkbox-label input {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: 0.2rem;
+  accent-color: var(--main);
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  font: inherit;
+  font-weight: 700;
+  color: var(--ground);
+  background: var(--main);
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--ink);
+}
+
+address {
+  font-style: normal;
+  margin-bottom: 1rem;
+}
+
+/* 6 · phone — keep this last  (owner: Member 1) */
+@media (max-width: 700px) {
+  body {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "aside"
+      "footer";
+  }
+
+  aside {
+    margin: 0 1.25rem 1.5rem;
+  }
+
+  nav ul {
+    gap: 0.25rem 1rem;
+  }
+}
+
+/* Katara Flow wave banner */
+.site-header {
+  background: var(--ground);
+  color: var(--main);
+  padding: 1.75rem 0 0;
+  overflow: hidden;
+}
+
+.site-header h1,
+.site-header h3,
+.site-header p {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+
+.site-header h1 {
+  color: var(--main);
+}
+
+.site-header h3 {
+  color: #319C9D;
+}
+
+.site-header p {
+  margin-bottom: 0;
+  max-width: 46rem;
+}
+
+.wave-banner {
+  display: block;
+  width: 100%;
+  height: clamp(135px, 20vw, 235px);
+  object-fit: cover;
+  object-position: center bottom;
+  margin-top: 1.25rem;
+}
+
+/* Keep the page comfortable on smaller screens */
+@media (max-width: 700px) {
+  .site-header {
+    padding-top: 1.25rem;
+  }
+
+  .wave-banner {
+    height: 125px;
+    margin-top: 1rem;
+  }
+}
